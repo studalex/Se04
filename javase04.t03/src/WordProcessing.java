@@ -1,7 +1,4 @@
 import java.io.*;
-import java.nio.charset.Charset;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class WordProcessing {
     private static StringBuilder stringBuilder = new StringBuilder();

@@ -5,18 +5,18 @@ import java.util.GregorianCalendar;
 
 public class Film implements Serializable{
 
-    private ArrayList<Actors> actors;
+    private ArrayList<String> actors;
     private String filmName;
     private GregorianCalendar date;
     private StringBuilder description;
 
-    public ArrayList<Actors> getActors() {
+    public ArrayList<String> getActors() {
         return actors;
     }
 
-    public void setActors(Actors... actors) {
+    public void setActors(String... actors) {
         this.actors.clear();
-        for (Actors actor : actors) {
+        for (String actor : actors) {
             this.actors.add(actor);
         }
     }
@@ -46,14 +46,14 @@ public class Film implements Serializable{
     }
 
     public Film() {
-        this.actors = new ArrayList<Actors>();
+        this.actors = new ArrayList<String>();
         this.filmName = new String();
         this.date = new GregorianCalendar();
         this.description = new StringBuilder();
     }
 
-    public Film(String filmName, GregorianCalendar  date, String description, Actors... actors) {
-        this.actors = new ArrayList<Actors>();
+    public Film(String filmName, GregorianCalendar  date, String description, String... actors) {
+        this.actors = new ArrayList<String>();
         this.filmName = new String();
         this.date = new GregorianCalendar();
         this.description = new StringBuilder();
@@ -62,11 +62,11 @@ public class Film implements Serializable{
     }
 
 
-    public void setFilm(String filmName, GregorianCalendar date, String description, Actors... actors) {
+    public void setFilm(String filmName, GregorianCalendar date, String description, String... actors) {
         this.filmName = filmName;
         this.date = date;
         this.description.append(description);
-        for (Actors actor : actors) {
+        for (String actor : actors) {
             this.actors.add(actor);
         }
     }
@@ -83,7 +83,7 @@ public class Film implements Serializable{
         filmInfo.append('\n');
         filmInfo.append("Date: " + this.date.get(Calendar.YEAR));
         filmInfo.append('\n');
-        for (Actors actor : actors) {
+        for (String actor : actors) {
             filmInfo.append("Actor: " + actor + ", ");
         }
         filmInfo.append('\n');

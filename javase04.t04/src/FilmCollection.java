@@ -10,7 +10,7 @@ public class FilmCollection implements Serializable {
         this.filmCollection = new ArrayList<>();
     }
 
-    public void addFilm(String filmName, GregorianCalendar date, String description, Actors... actors) {
+    public void addFilm(String filmName, GregorianCalendar date, String description, String... actors) {
         filmCollection.add(new Film(filmName, date, description, actors));
     }
 
@@ -45,7 +45,7 @@ public class FilmCollection implements Serializable {
         }
     }
 
-    public void changeFilmActers(String filmName, Actors... actors) {
+    public void changeFilmActers(String filmName, String... actors) {
         for (Film film : filmCollection) {
             if (film.getFilmName().equals(filmName)) {
                 film.setActors(actors);

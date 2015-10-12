@@ -3,11 +3,9 @@ package ru.alex;
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class WordProcessing {
 
+public class WordProcessing {
     private static StringBuilder stringBuilder = new StringBuilder();
-    private static Pattern pattern;
-    private static Matcher matcher;
     private static String resultFind = "";
     private static int resultValue = 0;
 
